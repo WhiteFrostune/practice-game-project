@@ -1,15 +1,35 @@
 ﻿#include <iostream>
-
 using namespace std;
 
-int main() {
-	int i = 0;
-	cin >> i;
-	if (i < 6) {
-		cout << "ture" << endl;
+// 定义地图大小
+#define H 28
+#define W 60
+
+// 绘制地图
+void drawMap() {
+	system("cls"); // 清空控制台
+	cout << "<";
+	for (int i = 0; i < W; ++i) {
+		cout << "-";
 	}
-	else {
-		cout << "false" << endl;
+	cout << ">" << endl;
+	for (int y = 0; y < H; ++y) {
+		cout << "1";
+		for (int x = 0; x < W; ++x) {
+			cout << " ";
+		}
+		cout << "1" << endl;
+	}
+	cout << "<";
+	for (int i = 0; i < W; ++i) {
+		cout << "-";
+	}
+	cout << ">" << endl;
+}
+
+int main() {
+	drawMap();
+	while (1) {
 	}
 	return 0;
 }
